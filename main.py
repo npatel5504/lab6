@@ -10,17 +10,17 @@ def encode(password):
         continue
     return encoded_password
 
-"""
+
 def decode(encoded_password):
-    decoded_password = ""
+    res = ""
     for num in encoded_password:
-        int_num = int(num) #turn each element into an integer
-        decoded_int_num = int_num - 3 #subtract 3 from each element.
-        new_decoded_int_num = decoded_int_num % 10 #ensures no negative numbers and we stick to the range 0-9
-        decoded_string_num = str(new_decoded_int_num) #turn into string
-        decoded_password += decoded_string_num #add to empty string
-    return decoded_password
-"""
+        minus_3 = int(num) - 3
+        more_than_10 = minus_3 % 10
+        res += str(minus_3)
+    res = int(res)
+    return res
+
+
 
 def main():
     print("Menu")
