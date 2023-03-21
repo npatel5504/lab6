@@ -1,3 +1,5 @@
+
+# decoded by mae lea gordon
 def encode(password):
     #12345678
     encoded_password = ""
