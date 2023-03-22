@@ -16,9 +16,10 @@ def encode(password):
 def decode(encoded_password):
     res = ""
     for num in encoded_password:
+        int_num = int(num)
         minus_3 = int(num) - 3
         more_than_10 = minus_3 % 10
-        res += str(minus_3)
+        res += str(more_than_10)
     return res
 
 
@@ -40,7 +41,7 @@ def main():
             print()
         elif option == 2:
             decoded_password = decode(encoded_password)
-            print(f"The encoded password is", encoded_password, ", and the original password is", password, end=".")
+            print(f"The encoded password is", encoded_password, ", and the original password is", decoded_password, end=".")
             print()
             print()
         elif option == 3:
